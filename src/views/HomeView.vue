@@ -8,11 +8,16 @@
       <button @click="decreaserCount">Minus-</button>
       <button @click="increaserCount">Plus++</button>
     </div>
+    <hr>
+    <div>
+      This counter is: {{ oddOrEven }}
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "@vue/reactivity"
+import { computed } from "@vue/runtime-core"
 
 const count = ref(0)
 const increaserCount = () => {
@@ -21,6 +26,14 @@ const increaserCount = () => {
 const decreaserCount = () => {
   count.value--
 }
+
+const oddOrEven = computed(() => {
+  if(count.value % 2 === 0) {
+    return "Even"
+  } else {
+    return "Odd"
+  }
+})
 
 </script>
 
