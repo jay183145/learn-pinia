@@ -12,5 +12,6 @@
 <style>
 .app {
   text-align: center;
+  font-size: 3rem;
 }
 </style>
