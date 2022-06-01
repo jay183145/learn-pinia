@@ -18,6 +18,9 @@
 <script setup>
 import { ref } from "@vue/reactivity"
 import { computed } from "@vue/runtime-core"
+import { useCounterStore } from "@/store/counter"
+
+const stoerCounter = useCounterStore()
 
 const count = ref(0)
 const increaserCount = () => {
