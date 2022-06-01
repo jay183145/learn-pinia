@@ -2,14 +2,27 @@
 <template>
   <div class="home">
     <div class="count">
-      0
+      {{ count }}
     </div>
     <div class="buttons">
-      <button>Minus-</button>
-      <button>Plus++</button>
+      <button @click="decreaserCount">Minus-</button>
+      <button @click="increaserCount">Plus++</button>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref } from "@vue/reactivity"
+
+const count = ref(0)
+const increaserCount = () => {
+  count.value++
+}
+const decreaserCount = () => {
+  count.value--
+}
+
+</script>
 
 <style>
 .count{
