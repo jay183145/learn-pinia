@@ -2,7 +2,7 @@
 <template>
   <div class="home">
     <div class="count">
-      {{ count }}
+      {{ stoerCounter.count }}
     </div>
     <div class="buttons">
       <button @click="decreaserCount">Minus-</button>
